@@ -9,6 +9,20 @@ const MovieSchema = new mongoose.Schema({
         minLength: [3, "Movie must be at least 3 characters long"]
     },
 
+    length: {
+        type: Number,
+        required: [true, "How long is the movie?"],
+        maxLength: [4, "No movie is longer than 1000 minutes"],
+        minLength: [1, "Must be at least one minute"]
+    },
+
+    description: {
+        type: String,
+        required: [true, "Description is required"],
+        maxLength: [255, "That is not a description"],
+        minLength: [10, "Description must be at least 10 characters long"]
+    },
+
     year: {
         type: Number,
         required: [true, "When was the movie made?"],
@@ -16,28 +30,53 @@ const MovieSchema = new mongoose.Schema({
         minLength: [4, "Year only"]
     },
 
-    length: {
+    rating: {
+        type: String,
+        required: [true, "Who is the intended audience?"],
+        maxLength: [5, "Rating only please"],
+        minLength: [4, "Rating please"]
+    },
+
+    cast1: {
+        type: String,
+        required: [true, "At least one actor/actress is required"],
+    },
+
+    cast2: {
+        type: String
+    },
+
+    cast3: {
+        type: String
+    },
+
+    genre1: {
+        type: String,
+        required: [true, "At least one genre is required"],
+    },
+
+    genre2: {
+        type: String
+    },
+
+    keyword1: {
+        type: String,
+        required: [true, "At least one genre is required"],
+    },
+
+    keyword2: {
+        type: String
+    },
+
+    tag: {
+        type: String,
+        required: [true, "At least one tag is required"],
+    },
+
+    likeCounter:{
         type: Number,
-        required: [true, "How long is the movie?"],
-        maxLength: [4, "No movie is longer than 1000 minutes!"],
-        minLength: [1, "Must be at least one minute!"]
-    },
-
-    year: {
-        type: Number,
-        required: [true, "year is required"],
-
-    },
-
-    //for a checkbox field
-    isMotivational:{
-        type: Boolean
-    },
-
-    popularityLevel:{
-        type:Number,
-        max:[10, "Movie can't be more fire that 10"],
-        min:[1, "Movie cant be that bad that its less than 1"]
+        maxLength:[1, "You really liked the movie"],
+        minLength:[-1, "Oof thats not a good movie huh"]
     }
 
 }, {timestamps:true} )
