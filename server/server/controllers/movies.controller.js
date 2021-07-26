@@ -45,7 +45,6 @@ module.exports.findOneMovie = (req, res)=>{
 }
 
 module.exports.updateMovie = (req, res)=>{
-    
     Movie.findOneAndUpdate(
         {_id: req.params.movieId},
         req.body,
@@ -55,6 +54,16 @@ module.exports.updateMovie = (req, res)=>{
         .catch(err => {
             res.json(
                 {message: "something went wrong updating one movie", error: err}
+                )
+        })
+}
+
+module.exports.deleteMovie = (req, res)=>{
+    Movie.deleteOne({_id: req.params.movieId})
+        .then(deletedMovie=> res.json({results: deletedMovie}))
+        .catch(err => {
+            res.json(
+                {message: "something went wrong deleting a movie", error: err}
                 )
         })
 }
