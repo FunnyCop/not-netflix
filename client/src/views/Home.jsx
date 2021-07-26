@@ -1,10 +1,19 @@
-// placeholder
-
 import React from "react"
 
-const Home = props => {
+import LoginForm from "../components/LoginForm.jsx"
+
+import "../static/css/Home.css"
+
+const Home = () => {
     return (
-        <div id = "Home"></div>
+        <div id = "Home">
+            <header>
+                <span><h1>Not</h1><h1>Netflix</h1></span>
+            </header>
+            <main>
+                <LoginForm />
+            </main>
+        </div>
     )
 }
 
