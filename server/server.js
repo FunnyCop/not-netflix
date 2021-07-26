@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 8000;
-const db_name = "bookclub_api";
+const db_name = "not-netflix-api";
 
 const cors = require("cors");
 const mongoose = require("mongoose");
