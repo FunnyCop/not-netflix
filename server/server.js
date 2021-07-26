@@ -13,9 +13,9 @@ app.use(express.json(), express.urlencoded({extended: true}), cors({
 
 
 require("./server/routes/movie.routes")(app);
-require("./server/routes/users.routes")(app);
+// require("./server/routes/users.routes")(app);
 
-require("./server/config/mongoose.config");
+require("./server/config/movies.config");
 
 
 
