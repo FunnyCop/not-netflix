@@ -16,12 +16,13 @@ const MovieSchema = new mongoose.Schema({
         minLength: [4, "Year only"]
     },
 
-    year: {
+    length: {
         type: Number,
-        required: [true, "When was the movie made?"],
-        maxLength: [4, "Year only"],
-        minLength: [4, "Year only"]
+        required: [true, "How long is the movie?"],
+        maxLength: [4, "No movie is longer than 1000 minutes!"],
+        minLength: [1, "Must be at least one minute!"]
     },
+
     year: {
         type: Number,
         required: [true, "year is required"],

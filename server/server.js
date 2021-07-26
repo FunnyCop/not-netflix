@@ -5,7 +5,7 @@ const db_name = "not-netflix-api";
 
 const cors = require("cors");
 const mongoose = require("mongoose");
-const cookies = require("cookie-parser")
+const cookies = require("cookie-parser");
 
 
 app.use(express.json(), express.urlencoded({extended: true}), cors({
