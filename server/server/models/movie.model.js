@@ -1,23 +1,31 @@
 const mongoose = require("mongoose");
 
-//create a table to store quotes in
-const QuoteSchema = new mongoose.Schema({
+const MovieSchema = new mongoose.Schema({
 
-    content: {
+    title: {
         type: String,
-        required: [true, "Content is required tho'"],
-        maxLength: [1000, "Thats not a quote, thats a speech fam!"],
-        minLength: [3, "Quote must be at least 3 characters long"]
-    },
-    author: {
-        type: String,
-        required: [true, "Author is required. Who said it?? we needdzzz to know!"]
+        required: [true, "Title is required"],
+        maxLength: [30, "That is not a Movie"],
+        minLength: [3, "Movie must be at least 3 characters long"]
     },
 
+    year: {
+        type: Number,
+        required: [true, "When was the movie made?"],
+        maxLength: [4, "Year only"],
+        minLength: [4, "Year only"]
+    },
 
-    //this one is options b/c there is not required validation key
-    quotedOn: {
-        type: Date
+    year: {
+        type: Number,
+        required: [true, "When was the movie made?"],
+        maxLength: [4, "Year only"],
+        minLength: [4, "Year only"]
+    },
+    year: {
+        type: Number,
+        required: [true, "year is required"],
+
     },
 
     //for a checkbox field
@@ -27,12 +35,12 @@ const QuoteSchema = new mongoose.Schema({
 
     popularityLevel:{
         type:Number,
-        max:[10, "Quote can't be more fire that 10"],
-        min:[1, "Quote cant be that bad that its less than 1"]
+        max:[10, "Movie can't be more fire that 10"],
+        min:[1, "Movie cant be that bad that its less than 1"]
     }
 
 }, {timestamps:true} )
 
-const Quote = mongoose.model("Quote", QuoteSchema );
+const Movie = mongoose.model("Movie", MovieSchema );
 
-module.exports = Quote;
+module.exports = Movie;
