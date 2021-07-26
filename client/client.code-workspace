@@ -3,5 +3,14 @@
       {
         "path": "src"
       }
-    ]
+    ],
+    "settings": {
+      "liveSassCompile.settings.formats": [
+        {
+          "format": "expanded",
+          "extensionName": ".css",
+          "savePath": "/static/css"
+        }
+      ]
+    }
 }
