@@ -1,0 +1,15 @@
+{
+    "movies": [
+        {
+            "title": "",
+            "year": "",
+            "rating": "",
+            "genres": [ "" ],
+            "cast": [ "" ],
+            "descriptors": [ "" ],
+            "description": "",
+            "img": "",
+            "url": ""
+        }
+    ]
+}
