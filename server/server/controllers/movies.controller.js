@@ -12,3 +12,15 @@ module.exports.findAllMovies = (req,res) => {
             )
     })
 }
+
+module.exports.createMovie = (req,res)=>{
+    Movie.create(req.body)
+        .then(newMovie=>{
+            res.json({results: newMovie})
+        })
+        .catch(err => {
+            res.json(
+                {message: "something went wrong creating a new movie", error: err}
+                )
+        })
+}

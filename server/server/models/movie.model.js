@@ -9,6 +9,12 @@ const MovieSchema = new mongoose.Schema({
         minLength: [3, "Movie must be at least 3 characters long"]
     },
 
+    type: {
+        type: String,
+        required: [true, "Is it a movie or show?"],
+        minLength: [4, "Must be at least one minute"]
+    },
+
     length: {
         type: Number,
         required: [true, "How long is the movie?"],
