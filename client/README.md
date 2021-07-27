@@ -7,7 +7,7 @@ When Juli gets closer to finishing the backend I'll see what we need for login/r
 *-Logan*
 
 - [x] Start home page
-- [ ] Start login/registration form
+- [x] Start login/registration form
 - [ ] Start display after login
 - [ ] Start search display
 - [ ] Start trailer display
