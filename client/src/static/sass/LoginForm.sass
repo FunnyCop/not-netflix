@@ -1,5 +1,5 @@
 #LoginForm
-    width: 30em
+    width: 20em
     height: fit-content
 
     padding: 1em
@@ -7,11 +7,44 @@
     border: 1px solid black
 
     // Same background color as #Home
-    background-color: #76777A
+    background-color: #292B2C
 
     // The box shadow on the Home component is inset
     // Creating an opposing outset shadow helps establish depth
     box-shadow: 0.25em 0.25em 5em 1em rgba( 16, 16, 16, 0.3 )
 
+    font-size: 1.3em
+
+    form
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+    form:nth-child( 1 ) input[ type = "submit" ]
+        margin-top: -10px
+
+    form:nth-child( 2 )
+        margin-top: 30px
+        padding-top: 20px
+
+        border-top: 1px solid black
+
+    input
+        height: 1.7em
+
+        padding: .1em
+
+        background-color: #F4F2EC
+
+    h3, label, input[ type = "submit" ]
+        color: #F4F2EC
+
+    input[ type = "submit" ]
+        background-color: #AB2B46
+
     #RegistrationForm
         width: 100%
+
+    *
+        margin: 0
+        padding: 0

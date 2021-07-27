@@ -26,7 +26,7 @@ const RegistrationForm = () => {
     return (
             <form id = "RegistrationForm" onSubmit = { onSubmitHandler } className = "form-group">
 
-                <h1>Register</h1>
+                <h3>Register</h3>
 
                 <span>
                     <label>Username</label>
@@ -63,7 +63,7 @@ const RegistrationForm = () => {
 
                 { errors.confirm && <p className = "text-danger">{ errors.confirm.message }</p> }
 
-                <input type = "submit" value = "Register!" className = "btn btn-primary" />
+                <input type = "submit" value = "Register!" className = "btn" />
 
             </form>
     )

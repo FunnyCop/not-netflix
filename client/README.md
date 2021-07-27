@@ -1,9 +1,11 @@
 # CHECK COOKIES WITH THIS FUNCTION
 
 ```js
-axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
-    .then( res => !res.data.message && navigate( "/" ) )
-    .catch( navigate( "/" ), window.location.reload( true ) )
+useEffect( () => {
+    axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
+        .then( res => !res.data.message && navigate( "/" ) )
+        .catch( err => navigate( "/" ) )
+    }, [] )
 ```
 
 - [x] Start home page

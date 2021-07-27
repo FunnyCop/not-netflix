@@ -47,7 +47,7 @@ const LoginForm = () => {
 
                 { errors && <p className = "text-danger">{ errors.message }</p> }
 
-                <input type = "submit" value = "Login!" className = "btn btn-primary" />
+                <input type = "submit" value = "Login!" className = "btn" />
 
             </form>
 
