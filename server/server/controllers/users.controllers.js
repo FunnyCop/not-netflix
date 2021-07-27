@@ -38,16 +38,16 @@ class UserController {
             .catch(err => res.json({message: "Invalid login attempt", err}))
     }
 
-
+    // I need to test this on the front end -Logan
     getLoggedInUser(req, res) {
-        const deCodeJWT = jwt.decode(req.cookies.usertoken, {complete: true});
-        User.findById(deCodeJWT.payload._id)
-            .then(user => res.json(user))
-            .catch(err => res.json(err))
+        res.json( jwt.verify( req.cookies.usertoken, secret ) )
     }
-
-
-
+    // getLoggedInUser(req, res) {
+    //     const deCodeJWT = jwt.decode(req.cookies.usertoken, {complete: true});
+    //     User.findById(deCodeJWT.payload._id)
+    //         .then(user => res.json(user))
+    //         .catch(err => res.json(err))
+    // }
 
     // Verify that a cookie is correctly signed
     verifyUser( req, res ) {

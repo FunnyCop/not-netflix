@@ -3,6 +3,7 @@ import { Router } from "@reach/router"
 
 import Home from "./views/Home.jsx"
 import Browse from "./views/Browse.jsx"
+import CredentialsTest from "./components/CredentialsTest.jsx"
 
 // import LoginForm from "./components/LoginForm.jsx";
 // import RegistrationForm from "./components/RegistrationForm.jsx";
@@ -17,6 +18,7 @@ const App = () => {
       <Router>
         <Home path = "/" />
         <Browse path = "/browse" />
+        <CredentialsTest path = "/test" />
 
         {/* <LoginForm path = "/login" />
         <RegistrationForm path = "/register" />
