@@ -10,6 +10,6 @@ useEffect( () => {
 
 - [x] Start home page
 - [x] Start login/registration form
-- [ ] Start display after login
+- [x] Start display after login
 - [ ] Start search display
 - [ ] Start trailer display
