@@ -2,45 +2,25 @@ import React, { useState } from "react"
 import { navigate } from "@reach/router"
 import axios from "axios"
 
-
 const RegistrationForm = () => {
-    const [ form, setForm ] = useState ( {
-        username: "",
-        email: "",
-        phone: "",
-        password: "",
-        confirm: ""
-    } )
-
+    const [ form, setForm ] = useState ( { username: "", email: "", phone: "", password: "", confirm: "" } )
     const [ errors, setErrors ] = useState( {} )
 
-    const onChangeHandler = event => {
-        console.log( "changing stuffs" )
-        setForm( {
-            ...form,
-            [ event.target.name ]: event.target.value
-        } )
-    }
+    const onChangeHandler = event =>
+        setForm( { ...form, [ event.target.name ]: event.target.value } )
 
     const onSubmitHandler = event => {
         event.preventDefault()
 
-        axios.post("http://localhost:8000/api/register", form, { withCredentials: true } )
-            .then( res => {
-                console.log( res )
-                if ( res.data.errors ) {
-                    setErrors( res.data.errors )
-                }
+        axios.post( "http://localhost:8000/api/register", form, { withCredentials: true } )
 
-                else {
+            .then( res =>
+                res.data.errors
+                    ? setErrors( res.data.errors )
+                    : navigate( "/browse" )
+            )
 
-                    // I'll probably change this to /browse
-                    navigate( "/all" )  // MAY NEED TO SWITCH IF HOME ISN'T THE LOGGED IN USER SPECIFIC PAGE
-                }
-            } )
-            .catch( err => {
-                console.log( err )
-            } )
+            .catch( err => console.log( err ) )
     }
 
     return (
