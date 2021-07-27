@@ -1,77 +1,91 @@
-import React, { useState } from 'react';
-import {Link, navigate} from "@reach/router";
-import axios from 'axios';
+import React, { useState } from "react"
+import { navigate } from "@reach/router"
+import axios from "axios"
 
 
 const RegistrationForm = () => {
-    const [form, setForm] = useState ({
+    const [ form, setForm ] = useState ( {
         username: "",
         email: "",
         phone: "",
         password: "",
         confirm: ""
-    })
-    
-    const [errors, setErrors] = useState({})
+    } )
 
-    const onChangeHandler = (event) => {
-        console.log("changing stuffs")
-        setForm({
+    const [ errors, setErrors ] = useState( {} )
+
+    const onChangeHandler = event => {
+        console.log( "changing stuffs" )
+        setForm( {
             ...form,
-            [event.target.name]:event.target.value
-        })
+            [ event.target.name ]: event.target.value
+        } )
     }
 
-    const onSubmitHandler = (event) => {
-        event.preventDefault();
-        axios.post(`http://localhost:8000/api/register`, form, {withCredentials: true})
-            .then(res => {
-                console.log(res)
-                if(res.data.errors) {
-                    setErrors(res.data.errors)
+    const onSubmitHandler = event => {
+        event.preventDefault()
+
+        axios.post("http://localhost:8000/api/register", form, { withCredentials: true } )
+            .then( res => {
+                console.log( res )
+                if ( res.data.errors ) {
+                    setErrors( res.data.errors )
                 }
-                else{
-                    navigate("/all")  // MAY NEED TO SWITCH IF HOME ISN'T THE LOGGED IN USER SPECIFIC PAGE
+
+                else {
+
+                    // I'll probably change this to /browse
+                    navigate( "/all" )  // MAY NEED TO SWITCH IF HOME ISN'T THE LOGGED IN USER SPECIFIC PAGE
                 }
-            })
-            .catch(err => {
-                console.log(err)
-            })
+            } )
+            .catch( err => {
+                console.log( err )
+            } )
     }
 
-    return(
-        <div>
-            <h1>Register</h1>
-            <form  onSubmit={onSubmitHandler} className="form-group">
-                <div>
+    return (
+            <form id = "RegistrationForm" onSubmit = { onSubmitHandler } className = "form-group">
+
+                <h1>Register</h1>
+
+                <span>
                     <label>Username</label>
-                    <input onChange={onChangeHandler} type="text" name="username"/>
-                </div>
-                {errors.username ? <p className="text-danger">{errors.username.message}</p> : ""}
-                <div>
+                    <input onChange = { onChangeHandler } type = "text" name = "username" className = "form-control" />
+                </span>
+
+                { errors.username && <p className = "text-danger">{ errors.username.message }</p> }
+
+                <span>
                     <label>Email</label>
-                    <input onChange={onChangeHandler} type="text" name="email"/>
-                </div>
-                {errors.email ? <p className="text-danger">{errors.email.message}</p> : ""}
-                <div>
+                    <input onChange = { onChangeHandler } type = "text" name = "email" className = "form-control" />
+                </span>
+
+                { errors.email && <p className = "text-danger">{ errors.email.message }</p> }
+
+                <span>
                     <label>Phone Number</label>
-                    <input onChange={onChangeHandler} type="text" name="phone"/>
-                </div>
-                {errors.phone ? <p className="text-danger">{errors.phone.message}</p> : ""}
-                <div>
+                    <input onChange={onChangeHandler} type="text" name="phone" className = "form-control" />
+                </span>
+
+                { errors.phone && <p className = "text-danger">{ errors.phone.message }</p> }
+
+                <span>
                     <label>Password</label>
-                    <input onChange={onChangeHandler} type="password" name="password"/>
-                </div>
-                {errors.password ? <p className="text-danger">{errors.password.message}</p> : ""}
-                <div>
+                    <input onChange = { onChangeHandler } type = "password" name = "password" className = "form-control" />
+                </span>
+
+                { errors.password && <p className = "text-danger">{ errors.password.message }</p> }
+
+                <span>
                     <label>Confirm Password</label>
-                    <input onChange={onChangeHandler} type="password" name="confirm"/>
-                </div>
-                {errors.confirm ? <p className="text-danger">{errors.confirm.message}</p> : ""}
-                <input type="submit" value="Register!" className="btn btn-primary" />
-                <Link to="/">Login</Link>
+                    <input onChange = { onChangeHandler } type = "password"  name = "confirm" className = "form-control" />
+                </span>
+
+                { errors.confirm && <p className = "text-danger">{ errors.confirm.message }</p> }
+
+                <input type = "submit" value = "Register!" className = "btn btn-primary" />
+
             </form>
-        </div>
     )
 }
 
