@@ -2,8 +2,8 @@
 
 ```js
 axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
-    .then( res => console.log( res ) )
-    .catch( err => console.log( err ) )
+    .then( res => !res.data.message && navigate( "/" ) )
+    .catch( navigate( "/" ), window.location.reload( true ) )
 ```
 
 - [x] Start home page
