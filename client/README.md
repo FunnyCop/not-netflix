@@ -4,7 +4,7 @@
 useEffect( () => {
     axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
         .then( res => !res.data.message && navigate( "/" ) )
-        .catch( err => navigate( "/" ) )
+        .catch( () => navigate( "/" ) )
     }, [] )
 ```
 
