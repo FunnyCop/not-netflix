@@ -48,7 +48,6 @@ const LoginForm = () => {
                     <input onChange = { onChangeHandler } type = "password" name = "password" className = "form-control" />
                 </span>
 
-                {/* Invalid Login Attempt Error Message */}
                 { errors && <p className = "text-danger">{ errors.message }</p> }
 
                 <input type = "submit" value = "Login!" className = "btn btn-primary" />
