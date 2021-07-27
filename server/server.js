@@ -9,7 +9,7 @@ const cookies = require("cookie-parser");
 
 
 app.use(express.json(), express.urlencoded({extended: true}), cors({
-    credentials: true, origin: "http://localhost:3000"}), cookies());
+    credentials: true, origin: "http://localhost:3001"}), cookies());
 
 
 require("./server/routes/movie.routes")(app);
