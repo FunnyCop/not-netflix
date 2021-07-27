@@ -18,15 +18,16 @@ const UserSchema = new mongoose.Schema({
             message: props => `${props.value} is not a valid phone number! Must be ###-###-####`
         },
     },
-        // NEED TO CONFIRM THAT VALIDATOR WORKS
     password: {
         type: String,
         required: [true, "Password is required"],
-        minlength: [8, "Password must be 8 characters or longer"],
-        validate: {
-            validator: val => /^[a-z]+[A-Z]+[0-9]+([a-zA-Z0-9]{3,})$/.test(val), 
-            message: "Password must contain at least one letter AND one number"
-            },
+
+        //////
+        // minlength: [8, "Password must be 8 characters or longer"],
+        // validate: {
+        //     validator: val => /^[a-zA-Z]$/.test(val), 
+        //     message: "Password must contain at least one letter AND one number"
+        //     },
     },
     username: {
         type: String,
