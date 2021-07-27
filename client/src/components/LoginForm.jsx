@@ -13,7 +13,7 @@ const LoginForm = () => {
         password: ''
     })
 
-    const [erroes, setErrors] = useState({})
+    const [errors, setErrors] = useState({})
 
     const onChangeHandler = (event) => {
         console.log("changing the things")
@@ -46,7 +46,7 @@ const LoginForm = () => {
             <div>
                 <h1>Login</h1>
                 <form onSubmit={onSubmitHandler} className="form-group">
-                    {errors? <p className="text-danger">{errors.message}</p> : ""}
+                    {/* {errors? <p className="text-danger">{errors.message}</p> : ""} */}
                     <div>
                         <label>Username</label>
                         <input onChange={onChangeHandler} type="text" name="username" className="form-control"/>
