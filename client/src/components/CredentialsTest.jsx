@@ -12,7 +12,7 @@ const CredentialsTest = () => {
 
         axios.get( "http://localhost:8000/api/user", { withCredentials: true } )
             .then( res => setUser( res.data._id ) )
-            .catch( err => console.log( err ) )
+            .catch( () => navigate( "/" ) )
     }, [] )
 
     return (
