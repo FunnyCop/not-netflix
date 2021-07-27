@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useState } from 'react';
+import {Link, navigate} from "@reach/router";
+import axios from 'axios';
 
 // email, phone, password, username, _confirm
 
