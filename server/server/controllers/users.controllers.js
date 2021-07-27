@@ -45,6 +45,16 @@ class UserController {
             .then(user => res.json(user))
             .catch(err => res.json(err))
     }
+
+
+
+
+    // Verify that a cookie is correctly signed
+    verifyUser( req, res ) {
+        jwt.verify( req.cookies.usertoken, secret )
+            ? res.json( { message: true } )
+            : res.json( { message: false } )
+    }
 }
 
 module.exports = new UserController();
