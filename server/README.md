@@ -1,2 +1,3 @@
-## Juli -> **Backend Users**
-## Johnathan -> **Backend Movies**
+Juli -> **Backend Users**
+
+Johnathan -> **Backend Movies**
