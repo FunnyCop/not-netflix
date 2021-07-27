@@ -5,6 +5,8 @@ import "./static/css/App.css"
 
 import LoginForm from "./components/LoginForm.jsx";
 import RegistrationForm from "./components/RegistrationForm.jsx";
+import AddProfile from "./views/AddProfile"
+import EditProfile from "./views/EditProfile"
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Home path = "/" />
         <LoginForm path = "/login" />
         <RegistrationForm path = "/register" />
+        <AddProfile path = "/profile/add" />
+        <EditProfile path = "/profile/edit" />
       </Router>
     </div>
   )

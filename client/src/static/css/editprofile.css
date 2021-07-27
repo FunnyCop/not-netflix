@@ -1,0 +1,9 @@
+#row {
+    display: inline-block;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+
+.box1 {
+    display: flex;
+}
