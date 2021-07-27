@@ -5,6 +5,7 @@
   height: fit-content;
   padding: 1em;
   border: 1px solid black;
+  border-radius: 1em;
   background-color: #292B2C;
   -webkit-box-shadow: 0.25em 0.25em 1em 0.5em rgba(16, 16, 16, 0.3);
           box-shadow: 0.25em 0.25em 1em 0.5em rgba(16, 16, 16, 0.3);
@@ -34,8 +35,12 @@
 
 #LoginForm input {
   height: 1.7em;
-  padding: .1em;
   background-color: #F4F2EC;
+  border: 1px solid black;
+}
+
+#LoginForm h3, #LoginForm label {
+  text-shadow: 1px 1px 1px #000000, 1px 2px 1px #000000, 1px 3px 1px #000000;
 }
 
 #LoginForm h3, #LoginForm label, #LoginForm input[type="submit"] {
