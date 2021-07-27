@@ -19,6 +19,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <Browse path="/browse" />
+        <CredentialsTest path = "test" />
         <ProfileAdd path="/profile/add" />
         <ProfileEdit path="/profile/edit" />
         <ProfileImages path="/profile/picture/select" />
