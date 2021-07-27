@@ -29,6 +29,10 @@ const UserSchema = new mongoose.Schema({
     username: {
         type: String,
         required: [true, "Username is required"]
+    }, 
+    profileId: {
+        type: Number,
+        required: [true]
     }
 }, {timestamps: true});
 
