@@ -38,7 +38,28 @@ const LoginForm = () => {
             })
     }
     return (
-        <div id = "LoginForm">Login form</div>
+        <div>
+            <div id = "LoginForm">Login form</div>
+
+            <div>
+                <h1>Login</h1>
+                <form onSubmit={onSubmitHandler} className="form-group">
+                    {errors? <p className="text-danger">{errors.message}</p> : ""}
+                    <div>
+                        <label>Username</label>
+                        <input onChange={onChangeHandler} type="text" name="username" className="form-control"/>
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input onChange={onChangeHandler} type="password" name="password" className="form-control"/>
+                    </div>
+                    <div className="d-flex">
+                        <input type="submit" value="Login!" className="btn btn-primary" />
+                        <Link to="/register">Register</Link>
+                    </div>
+                </form>
+            </div>
+        </div>
     )
 }
 
