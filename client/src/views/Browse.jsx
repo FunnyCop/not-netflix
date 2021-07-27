@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import axios from "axios"
 import { navigate } from "@reach/router"
+import NavBar from "../components/NavBar";
 
 // This is just here to test cookie validation
 // Replace this with the actual page that should be displayed
@@ -14,7 +15,10 @@ const Browse = () => {
     }, [] )
 
     return (
-        <div id =  "Browse">Validation Successful</div>
+        <div id =  "Browse">
+            <NavBar />
+            Validation Successful
+            </div>
     )
 }
 
