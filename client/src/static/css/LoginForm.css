@@ -6,8 +6,8 @@
   padding: 1em;
   border: 1px solid black;
   background-color: #292B2C;
-  -webkit-box-shadow: 0.25em 0.25em 5em 1em rgba(16, 16, 16, 0.3);
-          box-shadow: 0.25em 0.25em 5em 1em rgba(16, 16, 16, 0.3);
+  -webkit-box-shadow: 0.25em 0.25em 1em 0.5em rgba(16, 16, 16, 0.3);
+          box-shadow: 0.25em 0.25em 1em 0.5em rgba(16, 16, 16, 0.3);
   font-size: 1.3em;
 }
 
