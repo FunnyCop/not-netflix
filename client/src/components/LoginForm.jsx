@@ -7,9 +7,6 @@ import RegistrationForm from "./RegistrationForm.jsx"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../static/css/LoginForm.css"
 
-// FOR LOGIN: username, password
-// FOR REGISTRATION: username, email, phone, password, confirm
-
 const LoginForm = () => {
     const [ form, setForm ] = useState( { username: "", password: "" } )
     const [ errors, setErrors ] = useState( {} )
