@@ -11,6 +11,10 @@ body, #root {
   height: 100vh;
 }
 
+.logo {
+  height: 2em;
+}
+
 @font-face {
   font-family: "Netflix Sans Regular";
   font-style: normal;
