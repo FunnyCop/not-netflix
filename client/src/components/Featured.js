@@ -13,8 +13,8 @@ const Featured = () => {
                     </video>
                 </div>
                 <div class="header-content text-md-center">
-                    <h1>here are cars</h1>
-                    <p>a story about cars</p>
+                    <h1>W A V E S</h1>
+                    <p>a story about waves or whatever</p>
                     <a class="btn btn-secondary">&#9655; play</a>
                 </div>
             </header>
