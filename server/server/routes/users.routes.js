@@ -12,6 +12,5 @@ module.exports = app => {
     // ============
     app.post("/api/login", UserController.login)
 
-    app.get( "/api/user", UserController.getLoggedInUser )
     app.get( "/api/verify", UserController.verifyUser )
 }

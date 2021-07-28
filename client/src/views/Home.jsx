@@ -10,7 +10,7 @@ const Home = () => {
 
     useEffect( () => {
         axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
-            .then( res => res.data.message && navigate( "/browse" ) )
+            .then( res => res.data._id && navigate( "/browse" ) )
             .catch( () => navigate( "/" ) )
     }, [] )
 
