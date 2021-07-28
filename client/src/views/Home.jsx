@@ -4,6 +4,8 @@ import { navigate } from "@reach/router"
 
 import LoginForm from "../components/LoginForm.jsx"
 
+import logo from "../static/img/notnetflix.png"
+
 import "../static/css/Home.css"
 
 const Home = () => {
@@ -19,8 +21,7 @@ const Home = () => {
 
             <header>
                 <span>
-                    <h1>Not</h1>
-                    <h1>Netflix</h1>
+                    <img src = { logo } alt="logo" />
                 </span>
             </header>
 

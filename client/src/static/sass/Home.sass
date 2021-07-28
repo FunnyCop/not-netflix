@@ -24,38 +24,5 @@
         span
             width: fit-content
 
-            display: flex
-            gap: 0.5em
-
-            h1:nth-child( 1 )
-                color: #F4F2EC
-
-            h1:nth-child( 2 )
-                color: #AB2B46
-
-            h1
-                font-size: 3em
-
-                // This is literally everything for the text shadow
-                // It looks like way too much but each shadow only has the width and height of the text
-
-                // Add more shadows to make it thicker, remove shadows to make it thinner
-                // More even transitions between shadows will make it appear softer
-                $text-shadow-1: rgba( 16, 16, 16, 0.5 )
-                $text-shadow-2: rgba( 16, 16, 16, 0.3 )
-                $text-shadow-3: rgba( 16, 16, 16, 0.1 )
-
-                text-shadow: 1px 1px 1px $text-shadow-1,
-                1px 2px 1px $text-shadow-1,
-                1px 3px 1px $text-shadow-1,
-                1px 4px 1px $text-shadow-1,
-                1px 5px 1px $text-shadow-1,
-                1px 6px 1px $text-shadow-1,
-
-                // Lighter shadows
-                1px 10px 6px $text-shadow-2,
-                1px 15px 10px $text-shadow-3,
-                1px 20px 35px $text-shadow-3,
-
     main
         flex-grow: 1

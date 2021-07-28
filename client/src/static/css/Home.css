@@ -35,23 +35,6 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5em;
-}
-
-#Home header span h1:nth-child(1) {
-  color: #F4F2EC;
-}
-
-#Home header span h1:nth-child(2) {
-  color: #AB2B46;
-}
-
-#Home header span h1 {
-  font-size: 3em;
-  text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.5), 1px 2px 1px rgba(16, 16, 16, 0.5), 1px 3px 1px rgba(16, 16, 16, 0.5), 1px 4px 1px rgba(16, 16, 16, 0.5), 1px 5px 1px rgba(16, 16, 16, 0.5), 1px 6px 1px rgba(16, 16, 16, 0.5), 1px 10px 6px rgba(16, 16, 16, 0.3), 1px 15px 10px rgba(16, 16, 16, 0.1), 1px 20px 35px rgba(16, 16, 16, 0.1);
 }
 
 #Home main {
