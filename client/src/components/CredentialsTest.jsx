@@ -11,8 +11,16 @@ const CredentialsTest = () => {
             .catch( () => navigate( "/" ) )
     }, [] )
 
+    const logout = () => {
+        axios.get( "http://localhost:8000/api/logout", { withCredentials: true } )
+            .then( () => navigate( "/" ) )
+            .catch( () => navigate( "/" ) )
+    }
+
     return (
-        <div id = "CredentialsTest"></div>
+        <div id = "CredentialsTest">
+            <button onClick = { () => logout() }>Logout</button>
+        </div>
     )
 }
 export default CredentialsTest

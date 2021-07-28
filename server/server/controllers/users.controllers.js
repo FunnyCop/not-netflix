@@ -52,6 +52,11 @@ class UserController {
         const userID = jwt.verify( req.cookies.usertoken, secret )
         userID ? res.json( userID ) : res.json( false )
     }
+
+    // Clear cookies for logout
+    clearCookies( req, res ) {
+        res.clearCookie( "usertoken" ).send()
+    }
 }
 
 module.exports = new UserController();

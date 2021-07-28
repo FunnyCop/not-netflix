@@ -13,4 +13,5 @@ module.exports = app => {
     app.post("/api/login", UserController.login)
 
     app.get( "/api/verify", UserController.verifyUser )
+    app.get( "/api/logout", UserController.clearCookies )
 }
