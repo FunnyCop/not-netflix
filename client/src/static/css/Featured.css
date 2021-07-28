@@ -4,7 +4,7 @@
     align-items: center;
     color: #fff;
   }
-  
+
   .container {
     max-width: 960px;
     padding-left: 1rem;
@@ -12,7 +12,7 @@
     margin: auto;
     text-align: center;
   }
-  
+
   .fullscreen-video-wrap {
     position: absolute;
     top: 3.5em;
@@ -21,25 +21,25 @@
     height: 35vh;
     overflow: hidden;
   }
-  
+
   .fullscreen-video-wrap video {
     min-height: 100%;
     min-width: 100%;
   }
-  
+
   .header-content {
     z-index: 2;
     position: absolute;
-    top: 18em;
+    top: 14em;
+    left: -15em;
   }
-  
+
   .header-content h1 {
     font-size: 50px;
     margin-bottom: 0;
   }
-  
+
   .header-content p {
     font-size: 1.5rem;
     display: block;
   }
-  
