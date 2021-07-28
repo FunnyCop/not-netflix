@@ -5,6 +5,7 @@
 
 #NavBar {
   width: 100%;
+  min-height: 6em;
 
   padding-top: 1.5em;
   padding-bottom: 3em;

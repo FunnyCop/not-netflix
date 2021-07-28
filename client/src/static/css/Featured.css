@@ -1,8 +1,11 @@
 .v-header {
-    height: 39vh;
+  min-height: 30em;
+
     display: flex;
     align-items: center;
     color: #fff;
+
+    font-size: 16px;
   }
 
   .container {
@@ -15,7 +18,7 @@
     top: 3.5em;
     left: 0;
     width: 100vw;
-    height: 35vh;
+    height: 30em;
     overflow: hidden;
   }
 
@@ -26,9 +29,11 @@
 
   .header-content {
     z-index: 2;
-    position: absolute;
-    top: 14em;
-    left: -15em;
+    position: relative;
+    left: -25em;
+    top: 2em;
+
+    text-shadow: 2px 2px #292B2C, 3px 3px #292B2C;
   }
 
   .header-content h1 {
