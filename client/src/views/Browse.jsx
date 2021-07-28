@@ -4,6 +4,8 @@ import { navigate } from "@reach/router"
 import NavBar from "../components/NavBar";
 import Featured from "../components/Featured";
 
+import "../static/css/Browse.css"
+
 // This is just here to test cookie validation
 // Replace this with the actual page that should be displayed
 
@@ -20,8 +22,8 @@ const Browse = () => {
         <div id =  "Browse">
             <NavBar />
             <Featured />
-            Validation Successful
-            </div>
+            <div id = "TEMP">Validation Successful</div>
+        </div>
     )
 }
 

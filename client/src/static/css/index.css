@@ -11,6 +11,11 @@ body, #root {
   height: 100vh;
 }
 
+body {
+  background-color: #292B2C;
+  overflow-x: hidden;
+}
+
 .logo {
   height: 2em;
 }

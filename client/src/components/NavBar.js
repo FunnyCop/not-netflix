@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const NavBar = () => {
 
     return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav id = "NavBar" className="navbar navbar-expand-lg navbar-dark ">
                 <div className="container-fluid">
                 <img className="logo" src={"/notnetflix.png"}></img>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">

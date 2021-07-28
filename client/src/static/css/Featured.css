@@ -6,9 +6,6 @@
   }
 
   .container {
-    max-width: 960px;
-    padding-left: 1rem;
-    padding-right: 1rem;
     margin: auto;
     text-align: center;
   }
@@ -17,7 +14,7 @@
     position: absolute;
     top: 3.5em;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 35vh;
     overflow: hidden;
   }
