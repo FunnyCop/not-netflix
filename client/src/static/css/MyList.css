@@ -19,15 +19,19 @@
 
 
 .contentWrapper {
+    padding: 1em;
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
-.content {
+#content {
     height: 10em;
     width: 20em;
     border: 2px solid white;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }

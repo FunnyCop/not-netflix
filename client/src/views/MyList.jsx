@@ -12,7 +12,24 @@ const MyList = () => {
             <NavBar />
         <div id="MyList">
             <div className="contentWrapper">
-                <div className="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
+                <div id="content"></div>
             </div>
         </div>
         </div>
