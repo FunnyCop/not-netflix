@@ -22,7 +22,9 @@ const Browse = () => {
         <div id =  "Browse">
             <NavBar />
             <Featured />
-            <div id = "TEMP">Validation Successful</div>
+            <div id = "Content">
+                
+            </div>
         </div>
     )
 }

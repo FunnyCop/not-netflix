@@ -2,11 +2,12 @@
     width: 100%;
 }
 
-#TEMP {
+#Content {
     width: 100%;
     height: 100%;
 
     margin-top: 5px;
+    padding: 10px;
 
     box-shadow: 48.795vw -20px 11px #292B2C, -48.795vw -20px 11px #292B2C;
     background-color: #292B2C;
