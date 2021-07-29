@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { navigate } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 import axios from "axios";
 import NavBar from "../components/NavBar";
 import img5 from "../static/profileIMGs/5.PNG";
@@ -52,7 +52,6 @@ const EditProfile = () => {
     return (
         <div>
             <NavBar />
-            <body className="bg-dark">
                 <div
                     id="updateUser"
                     className="text-light d-flex justify-content-center align-middle pt-5"
@@ -99,17 +98,18 @@ const EditProfile = () => {
                             -------------------------------------------------------------------------------
                         </h6>
 
-                        <input
-                            type="submit"
-                            value="Continue"
-                            className="btn btn-info mx-3"
-                        />
-                        <a href="/browse" className="btn btn-danger">
+                        <Link to="/browse">
+                            <input
+                                type="submit"
+                                value="Continue"
+                                className="btn btn-info mx-3"
+                            />
+                        </Link>
+                        <Link to="/browse" className="btn btn-danger">
                             Cancel
-                        </a>
+                        </Link>
                     </form>
                 </div>
-            </body>
         </div>
     );
 };
