@@ -6,10 +6,6 @@ import Featured from "../components/Featured";
 
 import "../static/css/Browse.css"
 
-
-// This is just here to test cookie validation
-// Replace this with the actual page that should be displayed
-
 const Browse = props => {
     const [ user, setUser ] = useState( null )
 

@@ -10,7 +10,7 @@
 
 #right-button {
   position: absolute;
-  right: 0%;
+  right: calc( 0% + 20px );
   z-index: 10;
   height: 150px;
   width: 40px;
@@ -82,4 +82,8 @@
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+}
+
+.body {
+  width: 100vw;
 }
