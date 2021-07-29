@@ -61,7 +61,7 @@ class UserController {
     // Updating a profile image
     updateUser( req, res ) {
         User.findByIdAndUpdate (
-            {_id: req.params.userID}, 
+            {_id: req.params._id}, 
             req.body,
             {new: true, runValidators: true}
         )

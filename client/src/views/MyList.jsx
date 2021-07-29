@@ -8,7 +8,7 @@ import "../static/css/MyList.css"
 const MyList = () => {
     const[media, setMedia] = useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/browse')
+        axios.get('http://localhost:8000/api/user/list')
             .then(res=>{
                 console.log(res)
                 setMedia(res.data.results);

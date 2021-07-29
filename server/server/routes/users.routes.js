@@ -25,7 +25,7 @@ module.exports = app => {
     // ============
     //  Update
     // ============
-    app.put("api/users/:userId", UserController.updateUser)
+    app.put("/api/update/:_id", UserController.updateUser)
 
     // ============
     //  Get All Users

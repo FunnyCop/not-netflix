@@ -2,8 +2,12 @@ import React from "react"
 import Row from "./Row.js"
 
 const CONTENT = {
-    browseHome: <Row title = "Action" type = "" />,
+    browseHome: <>
+    <Row title = "Action" type = "" />
+    <Row title="Adventure" type=""/>
+    <Row title="Horror" type=""/>
 
+    </>,
     browseShows: <>
         <Row title = "Action" type = "Show" />
         <Row title = "Adventure" type = "Show" />

@@ -15,7 +15,7 @@ const Featured = () => {
                 <div className="header-content text-md-center">
                     <h1>W A V E S</h1>
                     <p>a story about waves or whatever</p>
-                    <a className="btn btn-secondary">&#9655; play</a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="btn btn-secondary">&#9655; play</a>
                 </div>
             </header>
         </div>
