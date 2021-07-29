@@ -33,8 +33,8 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, "Username is required"]
     }, 
-    profileId: {
-        type: Number,
+    profileImage: {
+        type: String
     }
 }, {timestamps: true});
 
@@ -48,7 +48,7 @@ UserSchema.virtual('confirm')
 
 UserSchema.pre('validate', function(next) {
     if (this.password !== this.confirm) {
-        this.invalidate('confirm', 'Credentials must match');
+        this.invalidate('confirm', 'Passwords must match');
     }
     next();
 });
