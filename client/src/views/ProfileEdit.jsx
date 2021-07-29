@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { navigate } from "@reach/router";
 import axios from "axios";
 import NavBar from "../components/NavBar";
@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 
 import "../static/css/editprofile.css"
 
-const EditProfile = () => {
+const EditProfile = (props) => {
     const [form, setForm] = useState({
         username: "",
         picture: "",
@@ -22,6 +22,15 @@ const EditProfile = () => {
         });
     };
 
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/users/loggedin", {withCredentials: true})
+            .then(res => {
+                console.log(res)
+                setForm(res.data)
+            })
+            .catch(err => console.log("error with the axios call", err))
+    }, [])
+
     const onSubmitHandler = (event) => {
         event.preventDefault();
 
@@ -30,6 +39,7 @@ const EditProfile = () => {
                 withCredentials: true,
             })
             .then((res) => {
+                console.log("trying the update")
                 console.log(res);
 
                 if (res.data.message === "Success!") {
@@ -75,7 +85,7 @@ const EditProfile = () => {
                                     onChange={onChangeHandler}
                                     type="text"
                                     name="username"
-                                    placeholder="name"
+                                    value={form.username}
                                 />
                                 <input
                                     className="mb-2"
@@ -102,7 +112,7 @@ const EditProfile = () => {
                             value="Continue"
                             className="btn btn-info mx-3"
                         />
-                        <a href="/home" className="btn btn-danger">
+                        <a href="/browse" className="btn btn-danger">
                             Cancel
                         </a>
                     </form>

@@ -25,5 +25,19 @@ module.exports = app => {
     // ============
     //  Update
     // ============
-    app.put("api/profileImage/UserId", UserController.updateUser)
+    app.put("api/users/:userId", UserController.updateUser)
+
+    // ============
+    //  Get All Users
+    // ============
+    app.get("/api/all", UserController.findAllUsers)
+
+    // ============
+    //  Get Logged In User
+    // ============
+    app.get("/api/users/loggedin", authenticate, UserController.getLoggedInUser)
+    // ============
+    //  Get One User
+    // ============
+    app.get("/api/users/:id", UserController.findAllUsers)
 }

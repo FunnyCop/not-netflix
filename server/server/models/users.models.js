@@ -33,7 +33,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, "Username is required"]
     }, 
-    profileImage: {
+    picture: {
         type: String
     }
 }, {timestamps: true});
