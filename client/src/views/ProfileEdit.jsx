@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import { navigate } from "@reach/router";
 import axios from "axios";
 import NavBar from "../components/NavBar";
+import img5 from "../static/profileIMGs/5.PNG";
 
 
-import "../static/css/editprofile.css"
+// import "../static/css/editprofile.css"
 
-const EditProfile = (props) => {
+const EditProfile = () => {
     const [form, setForm] = useState({
-        username: "",
-        picture: "",
+        username: ""
     });
     // need a user route to assign picture/update??
-    const [errors, setErrors] = useState({});
+
 
     const onChangeHandler = (event) => {
         console.log("changing the things");
@@ -25,7 +25,6 @@ const EditProfile = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/users/loggedin", {withCredentials: true})
             .then(res => {
-                console.log(res)
                 setForm(res.data)
             })
             .catch(err => console.log("error with the axios call", err))
@@ -35,18 +34,15 @@ const EditProfile = (props) => {
         event.preventDefault();
 
         axios
-            .put("http://localhost:8000/api/users/:userId", form, {
+            .put(`http://localhost:8000/api/update/${form._id}`, form, {
                 withCredentials: true,
             })
             .then((res) => {
-                console.log("trying the update")
-                console.log(res);
-
                 if (res.data.message === "Success!") {
-                    navigate("/all");
-                } else {
-                    setErrors(res.data);
-                }
+                    console.log("edited successfully!")
+                    navigate("/profile/edit");
+                } 
+                
             })
             .catch((err) => {
                 console.log(err);
@@ -71,11 +67,7 @@ const EditProfile = (props) => {
 
                             <div className="inline-block ">
                                 <a href="/profile/picture/select">
-                                <img
-                                    className=""
-                                    src="https://www.graphicsprings.com/filestorage/stencils/18caf1005c4eedca8b833788e88e53bc.svg"
-                                    alt="1"
-                                />
+                                    <img className="profileIcon" src={img5} alt="logo" />
                                 </a>
                             </div>
 
