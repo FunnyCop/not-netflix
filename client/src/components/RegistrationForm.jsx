@@ -3,7 +3,7 @@ import { navigate } from "@reach/router"
 import axios from "axios"
 
 const RegistrationForm = () => {
-    const [ form, setForm ] = useState ( { username: "", email: "", phone: "", password: "", confirm: "" } )
+    const [ form, setForm ] = useState ( { username: "", email: "", phone: "", password: "", confirm: "", picture: "default" } )
     const [ errors, setErrors ] = useState( {} )
 
     const onChangeHandler = event =>
