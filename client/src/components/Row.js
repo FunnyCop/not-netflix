@@ -14,7 +14,7 @@ const Row = (props) => {
                 setAllMovies(res.data.results)
             })
             .catch(err => console.log("errorrr with axios call", err))
-    })
+    },[])
 
     const leftClick = (element) => {
         console.log("left button")

@@ -11,14 +11,22 @@ import "../static/css/Browse.css"
 // Replace this with the actual page that should be displayed
 
 const Browse = () => {
+    const [ user, setUser ] = useState( null )
+
+    useEffect( () => {
+        axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
+            .then( res => res.data._id ? setUser( res.data._id ) : navigate( "/" ) )
+            .catch( () => !user && navigate( "/" ) )
+
+    }, [ user] )
     return (
         <div id="Browse">
             <NavBar />
             <Featured />
-            <div className="Content">
+            <div id="Content">
                 {/* <Row title="Action" type="Movie" NetflixOriginal isLargeRow/> */}
-                <Row title="Action" type="Show" />
-                <Row title="Comedy" type="Show" />
+                <Row title="Action" type="" />
+                <Row title="Adventure" type="" />
                 <Row title="Horror" type="Show" />
                 <Row title="Quirky" type="Show" />
                 Validation Successful

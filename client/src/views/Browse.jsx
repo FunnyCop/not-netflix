@@ -3,6 +3,7 @@ import axios from "axios"
 import { navigate } from "@reach/router"
 import NavBar from "../components/NavBar";
 import Featured from "../components/Featured";
+import Row from "../components/Row";
 
 import "../static/css/Browse.css"
 
@@ -16,14 +17,14 @@ const Browse = () => {
         axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
             .then( res => res.data._id ? setUser( res.data._id ) : navigate( "/" ) )
             .catch( () => !user && navigate( "/" ) )
-    }, [ user ] )
+    }, [ user] )
 
     return (
         <div id =  "Browse">
             <NavBar />
             <Featured />
             <div id = "Content">
-                
+                <Row title="Action" type=""/>
             </div>
         </div>
     )
