@@ -8,6 +8,7 @@ import ProfileAdd from "./views/ProfileAdd"
 import ProfileEdit from "./views/ProfileEdit"
 import ProfileImages from "./views/ProfileImages"
 import MyList from "./views/MyList"
+import Show from "./views/Shows"
 // import LoginForm from "./components/LoginForm.jsx";
 // import RegistrationForm from "./components/RegistrationForm.jsx";
 
@@ -19,6 +20,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <Browse path="/browse" />
+        <Show path="/browse/shows" />
 
         <ProfileAdd path="/profile/add" />
         <ProfileEdit path="/profile/edit" />
