@@ -9,6 +9,13 @@ const CONTENT = {
         <Row title = "Adventure" type = "Show" />
         <Row title = "Horror" type = "Show" />
         <Row title = "Quirky" type = "Show" />
+    </>,
+
+    browseMovies: <>
+        <Row title = "Action" type = "Movie" />
+        <Row title = "Adventure" type = "Movie" />
+        <Row title = "Horror" type = "Movie" />
+        <Row title = "Quirky" type = "Movie" />
     </>
 }
 
