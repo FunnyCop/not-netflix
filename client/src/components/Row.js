@@ -31,31 +31,33 @@ const Row = (props) => {
     }
 
 
-    return (
-        <div className="body">
-            <h2 id="rowTitle"> {props.NetflixOriginal ? "Not-Netflix Originals" : props.title} </h2>
+    if ( allMovies.length > 0 ) {
+        return (
+            <div className="body">
+                <h2 id="rowTitle"> {props.NetflixOriginal ? "Not-Netflix Originals" : props.title} </h2>
 
-            <div className="center" id={props.title}>
-                <button onClick={() => leftClick(props.title)}  id="left-button" >
-                <i class="arrow left"></i>
-                </button>
+                <div className="center" id={props.title}>
+                    <button onClick={() => leftClick(props.title)}  id="left-button" >
+                    <i class="arrow left"></i>
+                    </button>
 
-                <button onClick={() => rightClick(props.title)} id="right-button">
-                <i class="arrow right"></i>
-                </button>
+                    <button onClick={() => rightClick(props.title)} id="right-button">
+                    <i class="arrow right"></i>
+                    </button>
 
-                {allMovies.map((q, i) => {
-                    return <div key={i} className="internal">
-                        <span className="blinds">
-                        <img id="rowIMG" src={q.image} className={props.isLargeRow ? "netflix-original" : "row-poster"} alt="mapped but no">
-                        </img>
-                        {/* <p>{q.title}</p> */}
-                        </span>
-                    </div>
-                })}
+                    {allMovies.map((q, i) => {
+                        return <div key={i} className="internal">
+                            <span className="blinds">
+                            <img id="rowIMG" src={q.image} className={props.isLargeRow ? "netflix-original" : "row-poster"} alt="mapped but no">
+                            </img>
+                            {/* <p>{q.title}</p> */}
+                            </span>
+                        </div>
+                    })}
+                </div>
             </div>
-        </div>
-    )
+        )
+    } else { return null }
 }
 
 export default Row;
