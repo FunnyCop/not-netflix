@@ -1,7 +1,7 @@
 const Movie = require("../models/movie.model")
 
 
-module.exports.findAllMovies = (req,res) => {
+module.exports.findAllEverything = (req,res) => {
     Movie.find()
     .then(allmovies => {
         res.json({results: allmovies})
@@ -9,6 +9,30 @@ module.exports.findAllMovies = (req,res) => {
     .catch(err => {
         res.json(
             {message: "something went wrong getting all the movies", error: err}
+            )
+    })
+}
+
+module.exports.findGenreOnly = (req,res) => {
+    Movie.find({genre1:req.params.genreId})
+    .then(allGenre => {
+        res.json({results: allGenre})
+    })
+    .catch(err => {
+        res.json(
+            {message: "something went wrong getting all by type", error: err}
+            )
+    })
+}
+
+module.exports.findByTypeByGenre = (req,res) => {
+    Movie.find({type:req.params.typeId, genre1:req.params.genreId})
+    .then(shows => {
+        res.json({results: shows})
+    })
+    .catch(err => {
+        res.json(
+            {message: "something went wrong getting all by type and genre", error: err}
             )
     })
 }
