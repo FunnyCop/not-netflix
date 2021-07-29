@@ -74,8 +74,11 @@ const EditProfile = () => {
                                 <a href="/profile/picture/select">
                                     <img className="profileIcon" 
                                     
-                                    src= {  form.picture = "1" ? "2" ? "3" ? "4" ? img1 : img2 : img3 : img4
-                                            : img5
+                                    src= {  form.picture == "1" ? img1 :
+                                            form.picture =="2" ? img2 :
+                                            form.picture == "3" ? img3 : 
+                                            form.picture =="4" ? img4 :
+                                            img5
                                         }      
                                     />
                                 </a>
