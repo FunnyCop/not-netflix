@@ -28,7 +28,9 @@ module.exports.findAllList = (req,res) => {
 }
 
 module.exports.findGenreOnly = (req,res) => {
-    Movie.find( { $or: [ { genre1: req.params.genreId }, { genre2: req.params.genreId } ] } )
+    Movie.find({$or: [{genre1: req.params.genreId},
+    {genre2: req.params.genreId}]})
+
     .then(allGenre => {
         res.json({results: allGenre})
     })
