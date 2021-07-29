@@ -3,6 +3,8 @@ const MovieController = require("../controllers/movies.controller")
 module.exports = app =>{
     app.get("/api/browse", MovieController.findAllEverything)
 
+    app.get("/api/browse/list", MovieController.findAllList)
+
     app.get("/api/browse/:genreId", MovieController.findGenreOnly)
 
     app.get("/api/browse/:genreId/:typeId", MovieController.findByTypeByGenre)
