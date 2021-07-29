@@ -36,10 +36,10 @@ const NavBar = () => {
                             <a id="navLinks" className="nav-link" href="/mylist" aria-disabled="true">My List</a>
                         </li>
                         <li className="nav-item">
-                            <a onClick={logout} id="navLinks" className="nav-link" href="/" aria-disabled="true">Log Out</a>
+                            <a id="navLinks" className="nav-link" href="/profile/edit" aria-disabled="true">Profile Settings</a>
                         </li>
                         <li className="nav-item">
-                            <Link to="/profile/edit">Edit</Link>
+                            <a onClick={logout} id="navLinks" className="nav-link" href="/" aria-disabled="true">Log Out</a>
                         </li>
                     </ul>
                 </div>
