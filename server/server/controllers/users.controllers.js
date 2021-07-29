@@ -72,6 +72,20 @@ class UserController {
                 )
         })  
     }
+
+    // Find All Users
+    findAllUsers(req, res) {
+        User.find()
+        .then(allUsers => res.json({results: allUsers}))
+        .catch(err => res.json(err))
+    }
+
+    // Get One User
+    getOneUser(req, res) {
+        User.findOne({_id:req.params._id})
+            .then(foundUser => res.json({results: foundUser}))
+            .catch(err => res.json(err))
+    }
 }
 
 module.exports = new UserController();

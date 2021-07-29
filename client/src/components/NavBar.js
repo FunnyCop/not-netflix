@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from "axios"
-import { navigate } from "@reach/router"
+import { Link, navigate } from "@reach/router"
 
 const NavBar = () => {
+    const [user, setUser] = useState({});
 
     const logout = () => {
         axios.get("http://localhost:8000/api/logout", { withCredentials: true })
             .then(() => navigate("/"))
             .catch(() => navigate("/"))
     }
-
 
     return (
         <nav id="NavBar" className="navbar navbar-expand-lg navbar-dark ">
@@ -39,7 +39,7 @@ const NavBar = () => {
                             <a onClick={logout} id="navLinks" className="nav-link" href="/" aria-disabled="true">Log Out</a>
                         </li>
                         <li className="nav-item">
-                            <img src={"/default.jpg"} alt="default profile image" />
+                            <Link to="/profile/edit">Edit</Link>
                         </li>
                     </ul>
                 </div>
