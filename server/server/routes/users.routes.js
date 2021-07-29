@@ -12,6 +12,18 @@ module.exports = app => {
     // ============
     app.post("/api/login", UserController.login)
 
+    // ============
+    //  Verify
+    // ============
     app.get( "/api/verify", UserController.verifyUser )
+
+    // ============
+    //  Logout
+    // ============
     app.get( "/api/logout", UserController.clearCookies )
+
+    // ============
+    //  Update
+    // ============
+    app.put("api/profileImage/UserId", UserController.updateUser)
 }

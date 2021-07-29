@@ -10,6 +10,7 @@ const NavBar = () => {
             .catch(() => navigate("/"))
     }
 
+
     return (
         <nav id="NavBar" className="navbar navbar-expand-lg navbar-dark ">
             <div className="container-fluid">
@@ -36,6 +37,9 @@ const NavBar = () => {
                         </li>
                         <li className="nav-item">
                             <a onClick={logout} id="navLinks" className="nav-link" href="/" aria-disabled="true">Log Out</a>
+                        </li>
+                        <li className="nav-item">
+                            <img src={"/default.jpg"} alt="default profile image" />
                         </li>
                     </ul>
                 </div>

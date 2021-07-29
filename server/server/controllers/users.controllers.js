@@ -57,6 +57,21 @@ class UserController {
     clearCookies( req, res ) {
         res.clearCookie( "usertoken" ).send()
     }
+
+    // Updating a profile image
+    updateUser( req, res ) {
+        User.findByIdAndUpdate (
+            {_id: req.params.userID}, 
+            req.body,
+            {new: true, runValidators: true}
+        )
+        .then(updatedUser => res.json({results: updatedUser}))
+        .catch(err => {
+            res.json(
+                {message: "something went wrong updating user information", error: err}
+                )
+        })  
+    }
 }
 
 module.exports = new UserController();
