@@ -10,7 +10,7 @@
 
 #right-button {
   position: absolute;
-  right: 0%;
+  margin-left: calc( 100% - 77px );
   z-index: 10;
   height: 150px;
   width: 40px;
@@ -23,7 +23,7 @@
   display: flex;
   gap: .5em;
   height: 200px;
-  width: 100%;
+  width: 100vw;
   /* border: 1px solid black; */
   margin-bottom: 3%;
   padding: 20px;
