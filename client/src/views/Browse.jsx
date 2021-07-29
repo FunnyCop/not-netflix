@@ -15,8 +15,8 @@ const Browse = () => {
     useEffect( () => {
         axios.get( "http://localhost:8000/api/verify", { withCredentials: true } )
             .then( res => res.data._id ? setUser( res.data._id ) : navigate( "/" ) )
-            .catch( () => navigate( "/" ) )
-    }, [] )
+            .catch( () => !user && navigate( "/" ) )
+    }, [ user ] )
 
     return (
         <div id =  "Browse">

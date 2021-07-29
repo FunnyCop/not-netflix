@@ -10,7 +10,6 @@ import "../static/css/LoginForm.css"
 const LoginForm = () => {
     const [ form, setForm ] = useState( { username: "", password: "" } )
     const [ errors, setErrors ] = useState( {} )
-    const [ token, setToken ] = useState( null )
 
     const onChangeHandler = event =>
         setForm( { ...form, [ event.target.name ]: event.target.value } )
