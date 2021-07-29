@@ -30,7 +30,6 @@
   .header-content {
     z-index: 2;
     position: relative;
-    left: -25em;
     top: 2em;
     text-shadow: 2px 2px #292B2C, 3px 3px #292B2C;
   }
