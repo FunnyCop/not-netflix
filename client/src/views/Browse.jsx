@@ -3,10 +3,8 @@ import axios from "axios"
 import { navigate } from "@reach/router"
 import NavBar from "../components/NavBar";
 import Featured from "../components/Featured";
-import Row from "../components/Row";
 
 import "../static/css/Browse.css"
-import { propTypes } from "react-bootstrap/esm/Image";
 
 // This is just here to test cookie validation
 // Replace this with the actual page that should be displayed
