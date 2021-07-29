@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link, navigate } from "@reach/router";
 import axios from "axios";
 import NavBar from "../components/NavBar";
+
+import img1 from "../static/profileIMGs/1.PNG";
+import img2 from "../static/profileIMGs/2.PNG";
+import img3 from "../static/profileIMGs/3.PNG";
+import img4 from "../static/profileIMGs/4.PNG";
 import img5 from "../static/profileIMGs/5.PNG";
 
 
@@ -25,6 +30,7 @@ const EditProfile = () => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/users/loggedin", {withCredentials: true})
             .then(res => {
+                console.log(res.data)
                 setForm(res.data)
             })
             .catch(err => console.log("error with the axios call", err))
@@ -66,7 +72,12 @@ const EditProfile = () => {
 
                             <div className="inline-block ">
                                 <a href="/profile/picture/select">
-                                    <img className="profileIcon" src={img5} alt="logo" />
+                                    <img className="profileIcon" 
+                                    
+                                    src= {  form.picture = "1" ? "2" ? "3" ? "4" ? img1 : img2 : img3 : img4
+                                            : img5
+                                        }      
+                                    />
                                 </a>
                             </div>
 
@@ -101,12 +112,9 @@ const EditProfile = () => {
                         <Link to="/browse">
                             <input
                                 type="submit"
-                                value="Continue"
+                                value="Done"
                                 className="btn btn-info mx-3"
                             />
-                        </Link>
-                        <Link to="/browse" className="btn btn-danger">
-                            Cancel
                         </Link>
                     </form>
                 </div>

@@ -29,7 +29,6 @@ const ProfileImages = () => {
         })
         .then(res => {
             setForm( { ...form, picture: event } )
-            navigate("/profile/edit");
         })
         .catch(err => console.log("error with the axios call", err))
     }
@@ -44,7 +43,7 @@ const ProfileImages = () => {
             .then((res) => {
                 if (res.data.message === "Success!") {
                     console.log("edited successfully!")
-                    
+                    navigate("/profile/edit");
                 } 
                 
             })
@@ -60,50 +59,43 @@ const ProfileImages = () => {
             <body className="bg-dark">
                 <form onSubmit={onSubmitHandler} className="d-flex justify-center">
 
-                    <Link to="/profile/picture/select">
+                    <div className="profilePosition">
                         <img
-                            onClick = {() => onClickHandler("1")}  
-                            className = "profilePosition profileIcon"
+                            onClick = {() => onClickHandler("1")}
+                            className = "profileIcon"
                             src = {img1}
                             alt = "1"
                             name = "picture"
                             value = "1"
                         />
-                    </Link>
-
-                    <Link to="/profile/picture/select">
                         <img
-                            onClick = {() => onClickHandler("2")}  
-                            className = "profilePosition profileIcon"
+                            onClick = {() => onClickHandler("2")}
+                            className = "profileIcon"
                             src = {img2}
                             alt = "2"
                             name = "picture"
                             value = "2"
                         />
-                    </Link>
-
-                    <Link to="/profile/picture/select">
                         <img
-                            onClick = {() => onClickHandler("3")}  
-                            className = "profilePosition profileIcon"
+                            onClick = {() => onClickHandler("3")}
+                            className = "profileIcon"
                             src = {img3}
                             alt = "3"
                             name = "picture"
                             value = "3"
                         />
-                    </Link>
-
-                    <Link to="/profile/picture/select">
                         <img
-                            onClick = {() => onClickHandler("4")}  
-                            className = "profilePosition profileIcon"
+                            onClick = {() => onClickHandler("4")}
+                            className = "profileIcon"
                             src = {img4}
                             alt = "4"
                             name = "picture"
                             value = "4"
                         />
-                    </Link>
-                    <input type="text" value = "Let's do it!" className="btn btn-primary" />
+                        <Link to="/profile/edit">
+                            <input type="text" value = "Let's do it!" className="btn btn-primary" />
+                        </Link>
+                    </div>
                 </form>
 
             </body>

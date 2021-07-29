@@ -37,14 +37,14 @@ const RegistrationForm = () => {
 
                 <span>
                     <label>Email</label>
-                    <input onChange = { onChangeHandler } type = "text" name = "email" className = "form-control" />
+                    <input onChange = { onChangeHandler } type = "text" name = "email" className = "form-control" placeholder="example@email.com"/>
                 </span>
 
                 { errors.email && <p className = "text-danger">{ errors.email.message }</p> }
 
                 <span>
                     <label>Phone Number</label>
-                    <input onChange={onChangeHandler} type="text" name="phone" className = "form-control" />
+                    <input onChange={onChangeHandler} type="text" name="phone" className = "form-control"  placeholder="123-234-3456"/>
                 </span>
 
                 { errors.phone && <p className = "text-danger">{ errors.phone.message }</p> }
