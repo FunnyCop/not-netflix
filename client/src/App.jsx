@@ -3,7 +3,6 @@ import { Router } from "@reach/router"
 
 import Home from "./views/Home.jsx"
 import Browse from "./views/Browse.jsx"
-import CredentialsTest from "./components/CredentialsTest.jsx"
 
 import ProfileAdd from "./views/ProfileAdd"
 import ProfileEdit from "./views/ProfileEdit"
@@ -20,7 +19,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <Browse path="/browse" />
-        <CredentialsTest path = "test" />
+
         <ProfileAdd path="/profile/add" />
         <ProfileEdit path="/profile/edit" />
         <ProfileImages path="/profile/picture/select" />
