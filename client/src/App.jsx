@@ -4,31 +4,29 @@ import { Router } from "@reach/router"
 import Home from "./views/Home.jsx"
 import Browse from "./views/Browse.jsx"
 
-import ProfileAdd from "./views/ProfileAdd"
-import ProfileEdit from "./views/ProfileEdit"
-import ProfileImages from "./views/ProfileImages"
-import MyList from "./views/MyList"
-import Show from "./views/Shows"
-// import LoginForm from "./components/LoginForm.jsx";
-// import RegistrationForm from "./components/RegistrationForm.jsx";
+import CONTENT from "./components/CONTENT.jsx"
+
+import ProfileAdd from "./views/ProfileAdd.jsx"
+import ProfileEdit from "./views/ProfileEdit.jsx"
+import ProfileImages from "./views/ProfileImages.jsx"
+import MyList from "./views/MyList.jsx"
 
 import "./static/css/App.css"
 
 const App = () => {
   return (
-    <div id="App">
+    <div id = "App">
       <Router>
-        <Home path="/" />
-        <Browse path="/browse" />
-        <Show path="/browse/shows" />
 
-        <ProfileAdd path="/profile/add" />
-        <ProfileEdit path="/profile/edit" />
-        <ProfileImages path="/profile/picture/select" />
-        <MyList path="/mylist" />
+        <Home path = "/" />
 
-        {/* <LoginForm path = "/login" />
-        <RegistrationForm path = "/register" /> */}
+        <Browse path = "/browse" content = { CONTENT.browseHome } />
+        <Browse path = "/browse/shows" content = { CONTENT.browseShows } />
+
+        <ProfileAdd path = "/profile/add" />
+        <ProfileEdit path = "/profile/edit" />
+        <ProfileImages path = "/profile/picture/select" />
+        <MyList path = "/mylist" />
 
       </Router>
     </div>

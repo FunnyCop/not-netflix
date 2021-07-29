@@ -6,11 +6,12 @@ import Featured from "../components/Featured";
 import Row from "../components/Row";
 
 import "../static/css/Browse.css"
+import { propTypes } from "react-bootstrap/esm/Image";
 
 // This is just here to test cookie validation
 // Replace this with the actual page that should be displayed
 
-const Browse = () => {
+const Browse = props => {
     const [ user, setUser ] = useState( null )
 
     useEffect( () => {
@@ -24,7 +25,7 @@ const Browse = () => {
             <NavBar />
             <Featured />
             <div id = "Content">
-                <Row title="Action" type=""/>
+                { props.content }
             </div>
         </div>
     )
