@@ -1,5 +1,5 @@
 .v-header {
-  min-height: 30em;
+  min-height: 40em;
 
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     top: 3.5em;
     left: 0;
     width: 100vw;
-    height: 30em;
+    height: 40em;
     overflow: hidden;
   }
 
