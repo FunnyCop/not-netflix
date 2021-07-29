@@ -2,23 +2,32 @@
   position: absolute;
   left: 0%;
   z-index: 10;
+  height: 150px;
+  width: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.561);
 }
 
 #right-button {
   position: absolute;
   right: 0%;
   z-index: 10;
+  height: 150px;
+  width: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.561);
 }
 
 /* container */
 .center {
+  display: flex;
+  gap: .5em;
   height: 150px;
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-bottom: 3%;
   padding: 20px;
   overflow: hidden;
-  white-space: nowrap;
   z-index: -1;
 }
 
@@ -26,13 +35,10 @@
 .internal {
   width: 200px;
   height: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-
-.center {
-  display: flex;
-  gap: .5em;
-}
 
 .row-poster {
   width: 200px;
@@ -55,4 +61,25 @@
 .netflix-original:hover {
   transform: scale(1.08);
   filter: drop-shadow(0 0 0.25rem crimson);
+}
+
+#rowIMG {
+  height: 10em;
+  width: 15em;
+}
+
+.arrow {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }

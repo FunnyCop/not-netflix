@@ -33,23 +33,23 @@ const Row = (props) => {
 
     return (
         <div className="body">
-            <h2> {props.NetflixOriginal ? "Not-Netflix Originals" : props.title} </h2>
+            <h2 id="rowTitle"> {props.NetflixOriginal ? "Not-Netflix Originals" : props.title} </h2>
 
             <div className="center" id={props.title}>
-                <button onClick={() => leftClick(props.title)}  id="left-button" className="btn-sm btn-info">
-                    swipe left
+                <button onClick={() => leftClick(props.title)}  id="left-button" >
+                <i class="arrow left"></i>
                 </button>
 
-                <button onClick={() => rightClick(props.title)} id="right-button" className="btn-sm btn-info">
-                    swipe right
+                <button onClick={() => rightClick(props.title)} id="right-button">
+                <i class="arrow right"></i>
                 </button>
 
                 {allMovies.map((q, i) => {
                     return <div key={i} className="internal">
                         <span className="blinds">
-                        <img src={q.image} className={props.isLargeRow ? "netflix-original" : "row-poster"} alt="mapped but no">
+                        <img id="rowIMG" src={q.image} className={props.isLargeRow ? "netflix-original" : "row-poster"} alt="mapped but no">
                         </img>
-                        <p>{q.title}</p>
+                        {/* <p>{q.title}</p> */}
                         </span>
                     </div>
                 })}
