@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, navigate } from "@reach/router";
 import axios from "axios";
-import NavBar from "../components/NavBar";
 
 import img1 from "../static/profileIMGs/1.PNG";
 import img2 from "../static/profileIMGs/2.PNG";

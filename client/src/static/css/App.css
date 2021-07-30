@@ -20,3 +20,10 @@
 #NavBar img {
   margin-right: 10px;
 }
+
+#ProfileAdd {
+  width: 100%;
+  height: fit-content;
+
+  margin-top: 6em;
+}
