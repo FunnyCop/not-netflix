@@ -8,7 +8,7 @@ const Featured = () => {
         <div>
             <header className="v-header container">
                 <div className="fullscreen-video-wrap">
-                    <video autoPlay={true} loop={true} muted>
+                    <video preload="none" autoPlay={true} loop={true} muted>
                         <source src={"/video.mp4"} type='video/mp4' />
                     </video>
                 </div>

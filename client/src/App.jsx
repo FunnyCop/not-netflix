@@ -24,7 +24,7 @@ const App = () => {
         <Browse path = "/browse/shows" content = { CONTENT.browseShows() } featured = { true } />
         <Browse path = "/browse/movies" content = { CONTENT.browseMovies() } featured = { true }/>
 
-        <Browse path = "/mylist" content = { <MyList /> } featured = { true } />
+        <Browse path = "/mylist" content = { <MyList /> } featured = { false } />
 
         <Browse path = "/profile/edit" content = { <ProfileEdit /> } featured = { false } />
         <Browse path = "/profile/picture/select" content = { <ProfileImages /> } featured = { false } />
