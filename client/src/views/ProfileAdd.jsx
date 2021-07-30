@@ -43,9 +43,7 @@ const AddProfile = () => {
 
 
     return (
-        <div>
-            <NavBar />
-            <body className="bg-dark">
+            <div id = "ProfileAdd">
                 <div id="updateUser" className="text-light d-flex justify-content-center align-middle pt-5">
                     <form onSubmit={onSubmitHandler} className="form-group">
                         <h2>Add Profile</h2>
@@ -64,8 +62,7 @@ const AddProfile = () => {
                         <a href="/home" className="btn btn-danger">Cancel</a>
                     </form>
                 </div>
-            </body>
-        </div>
+            </div>
     );
 };
 

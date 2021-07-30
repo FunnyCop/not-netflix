@@ -7,8 +7,6 @@ import img3 from "../static/profileIMGs/3.PNG";
 import img4 from "../static/profileIMGs/4.PNG";
 import "../static/css/ProfileIMG.css"
 
-import NavBar from "../components/NavBar"
-
 const ProfileImages = () => {
     const [form, setForm] = useState({
         picture: ""
@@ -54,9 +52,7 @@ const ProfileImages = () => {
     
 
     return (
-        <div>
-            <NavBar />
-            <body className="bg-dark">
+            <div className="bg-dark">
                 <form onSubmit={onSubmitHandler}>
 
                     <div className="profilePosition">
@@ -100,8 +96,7 @@ const ProfileImages = () => {
                     </div>
                 </form>
 
-            </body>
-        </div>
+            </div>
     )
 }
 

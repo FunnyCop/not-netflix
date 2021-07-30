@@ -27,10 +27,8 @@ const App = () => {
         <Browse path = "/mylist" content = { <MyList /> } featured = { true } />
 
         <Browse path = "/profile/edit" content = { <ProfileEdit /> } featured = { false } />
-
-        <ProfileAdd path = "/profile/add" />
-
-        <ProfileImages path = "/profile/picture/select" />
+        <Browse path = "/profile/picture/select" content = { <ProfileImages /> } featured = { false } />
+        <Browse path = "/profile/add" content = { <ProfileAdd /> } featured = { false } />
 
       </Router>
     </div>
