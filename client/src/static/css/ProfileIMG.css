@@ -8,11 +8,7 @@
     outline: 2px solid whitesmoke;
     outline-offset: -2.5px;
     cursor: pointer;
-}
-.profileIcon:focus {
-    border: 2px solid whitesmoke;
-    border-radius: 2.5px;
-    cursor: pointer;
+    transform: scale(1.03);
 }
 .profileIcon:active {
     transform: scale(0.99);

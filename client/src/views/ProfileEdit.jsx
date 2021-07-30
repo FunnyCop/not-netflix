@@ -87,13 +87,6 @@ const EditProfile = () => {
                                     name="username"
                                     value={form.username}
                                 />
-                                <input
-                                    className="mb-2"
-                                    onChange={onChangeHandler}
-                                    type="text"
-                                    name="background"
-                                    placeholder="background"
-                                />
                                 <select className="mb-2" aria-label="Default select example">
                                     <option selected>Maturity Filter</option>
                                     <option value="MA">MA</option>
