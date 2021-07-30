@@ -65,7 +65,7 @@ const EditProfile = () => {
                         <h6 className="text-muted">
                         </h6>
                         {/* change image to default picture */}
-                        <div className="d-flex w-25 gap-5 pt-5 pb-5">
+                        <div className="mainBox">
                             <div className="inline-block ">
                                 <a href="/profile/picture/select">
                                     <img className="profileIcon"
@@ -79,20 +79,26 @@ const EditProfile = () => {
                                     />
                                 </a>
                             </div>
-                            <div className="col mx-3 pt-2">
-                                <input
-                                    className="mb-2"
-                                    onChange={onChangeHandler}
-                                    type="text"
-                                    name="username"
-                                    value={form.username}
-                                />
-                                <select className="mb-2" aria-label="Default select example">
-                                    <option selected>Maturity Filter</option>
-                                    <option value="MA">MA</option>
-                                    <option value="R">R</option>
-                                    <option value="PG13">PG-13</option>
-                                </select>
+                            <div className="rightSide">
+                                <div className="editSection">
+                                    <h6>Username:</h6>
+                                    <input
+                                        className="mb-2"
+                                        onChange={onChangeHandler}
+                                        type="text"
+                                        name="username"
+                                        value={form.username}
+                                    />
+                                </div>
+                                <div className="editSection">
+                                    <h6>Maturity Settings:</h6>
+                                    <select className="mb-2" aria-label="Default select example">
+                                        <option selected>Maturity Filter</option>
+                                        <option value="MA">MA</option>
+                                        <option value="R">R</option>
+                                        <option value="PG13">PG-13</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div className="profile-button">
