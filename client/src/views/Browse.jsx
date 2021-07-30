@@ -18,7 +18,7 @@ const Browse = props => {
     return (
         <div id =  "Browse">
             <NavBar />
-            <Featured />
+            { props.featured && <Featured /> }
             <div id = "Content">
                 { props.content }
             </div>

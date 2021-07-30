@@ -20,14 +20,17 @@ const App = () => {
 
         <Home path = "/" />
 
-        <Browse path = "/browse" content = { CONTENT.browseHome() } />
-        <Browse path = "/browse/shows" content = { CONTENT.browseShows() } />
-        <Browse path = "/browse/movies" content = { CONTENT.browseMovies() } />
+        <Browse path = "/browse" content = { CONTENT.browseHome() } featured = { true } />
+        <Browse path = "/browse/shows" content = { CONTENT.browseShows() } featured = { true } />
+        <Browse path = "/browse/movies" content = { CONTENT.browseMovies() } featured = { true }/>
+
+        <Browse path = "/mylist" content = { <MyList /> } featured = { true } />
+
+        <Browse path = "/profile/edit" content = { <ProfileEdit /> } featured = { false } />
 
         <ProfileAdd path = "/profile/add" />
-        <ProfileEdit path = "/profile/edit" />
+
         <ProfileImages path = "/profile/picture/select" />
-        <MyList path = "/mylist" />
 
       </Router>
     </div>

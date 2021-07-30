@@ -56,72 +56,69 @@ const EditProfile = () => {
     };
 
     return (
-        <div>
-            <NavBar />
-                <div
-                    id="updateUser"
-                    className="text-light d-flex justify-content-center align-middle pt-5"
-                >
-                    <form onSubmit={onSubmitHandler} className="form-group">
-                        <h2>Edit Profile</h2>
-                        <h6 className="text-muted">
-                            ------------------------------------------------------------------------------
-                        </h6>
-                        {/* change image to default picture */}
-                        <div className="d-flex w-25 gap-5" id="">
+            <div
+                id="updateUser"
+                className="text-light d-flex justify-content-center align-middle pt-5"
+            >
+                <form onSubmit={onSubmitHandler} className="form-group">
+                    <h2>Edit Profile</h2>
+                    <h6 className="text-muted">
+                        ------------------------------------------------------------------------------
+                    </h6>
+                    {/* change image to default picture */}
+                    <div className="d-flex w-25 gap-5" id="">
 
-                            <div className="inline-block ">
-                                <a href="/profile/picture/select">
-                                    <img className="profileIcon" 
-                                    
-                                    src= {  form.picture === "1" ? img1 :
-                                            form.picture ==="2" ? img2 :
-                                            form.picture === "3" ? img3 : 
-                                            form.picture ==="4" ? img4 :
-                                            img5
-                                        }      
-                                    />
-                                </a>
-                            </div>
-
-                            <div className="col mx-3 pt-2">
-                                <input
-                                    className="mb-2"
-                                    onChange={onChangeHandler}
-                                    type="text"
-                                    name="username"
-                                    value={form.username}
+                        <div className="inline-block ">
+                            <a href="/profile/picture/select">
+                                <img className="profileIcon" 
+                                
+                                src= {  form.picture === "1" ? img1 :
+                                        form.picture ==="2" ? img2 :
+                                        form.picture === "3" ? img3 : 
+                                        form.picture ==="4" ? img4 :
+                                        img5
+                                    }      
                                 />
-                                <input
-                                    className="mb-2"
-                                    onChange={onChangeHandler}
-                                    type="text"
-                                    name="background"
-                                    placeholder="background"
-                                />
-                                <select className="mb-2" aria-label="Default select example">
-                                    <option selected>Maturity Filter</option>
-                                    <option value="MA">MA</option>
-                                    <option value="R">R</option>
-                                    <option value="PG13">PG-13</option>
-                                </select>
-                            </div>
+                            </a>
                         </div>
 
-                        <h6 className="text-muted">
-                            -------------------------------------------------------------------------------
-                        </h6>
-
-                        <Link to="/browse">
+                        <div className="col mx-3 pt-2">
                             <input
-                                type="submit"
-                                value="Done"
-                                className="btn btn-info mx-3"
+                                className="mb-2"
+                                onChange={onChangeHandler}
+                                type="text"
+                                name="username"
+                                value={form.username}
                             />
-                        </Link>
-                    </form>
-                </div>
-        </div>
+                            <input
+                                className="mb-2"
+                                onChange={onChangeHandler}
+                                type="text"
+                                name="background"
+                                placeholder="background"
+                            />
+                            <select className="mb-2" aria-label="Default select example">
+                                <option selected>Maturity Filter</option>
+                                <option value="MA">MA</option>
+                                <option value="R">R</option>
+                                <option value="PG13">PG-13</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h6 className="text-muted">
+                        -------------------------------------------------------------------------------
+                    </h6>
+
+                    <Link to="/browse">
+                        <input
+                            type="submit"
+                            value="Done"
+                            className="btn btn-info mx-3"
+                        />
+                    </Link>
+                </form>
+            </div>
     );
 };
 
