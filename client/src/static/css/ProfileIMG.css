@@ -1,11 +1,22 @@
 .profileIcon {
     max-width: 150px;
     max-height: 150px;
-
+    border-radius: 11px;
 }
+
+.profileIcon:hover {
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+}
+
 .profilePosition {
     width: 100%;
     margin: 15em auto;
     display: flex;
     justify-content: space-evenly;
+}
+
+.profile-button {
+    width: 100%;
+    text-align: center;
 }

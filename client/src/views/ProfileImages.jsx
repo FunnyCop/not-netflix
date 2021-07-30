@@ -57,7 +57,7 @@ const ProfileImages = () => {
         <div>
             <NavBar />
             <body className="bg-dark">
-                <form onSubmit={onSubmitHandler} className="d-flex justify-center">
+                <form onSubmit={onSubmitHandler}>
 
                     <div className="profilePosition">
                         <img
@@ -92,6 +92,8 @@ const ProfileImages = () => {
                             name = "picture"
                             value = "4"
                         />
+                    </div>
+                    <div className="profile-button">
                         <Link to="/profile/edit">
                             <input type="text" value = "Let's do it!" className="btn btn-primary" />
                         </Link>
