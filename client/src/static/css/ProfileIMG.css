@@ -53,12 +53,11 @@
 }
 .cancel {
     text-align: center;
-    background-color: #212529;
     padding: .3em;
     border: 1px solid grey;
     border-radius: 2px;
     width: 150px;
-    
+    background-color: #292b2c;
     min-width: 100px;
     color: grey;
 }
@@ -67,6 +66,7 @@
     border: 1px solid whitesmoke;
     border-radius: 2px;
     cursor: pointer;
+    background-color: #292b2c;
 }
 .editProfile {
     margin-top: 4em;

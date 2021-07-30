@@ -52,7 +52,7 @@ const ProfileImages = () => {
     
 
     return (
-            <div className="bg-dark">
+            <div>
                 <form onSubmit={onSubmitHandler}>
 
                     <div className="profilePosition">
