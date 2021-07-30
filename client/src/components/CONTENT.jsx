@@ -1,26 +1,54 @@
 import React from "react"
 import Row from "./Row.js"
 
+const genres = [
+    "Action",
+    "Adventure",
+    "Biography",
+    "Comedy",
+    "Crime",
+    "Drama",
+    "Exciting",
+    "Family",
+    "Historic",
+    "Horror",
+    "Mystery",
+    "Quirky",
+    "Romance",
+    "Social",
+    "Violent"
+]
+
 const CONTENT = {
-    browseHome: <>
-    <Row title = "Action" type = "" />
-    <Row title="Adventure" type=""/>
-    <Row title="Horror" type=""/>
+    browseHome: () => {
+        const rows = []
 
-    </>,
-    browseShows: <>
-        <Row title = "Action" type = "Show" />
-        <Row title = "Adventure" type = "Show" />
-        <Row title = "Horror" type = "Show" />
-        <Row title = "Quirky" type = "Show" />
-    </>,
+        genres.map( item => rows.push(
+            <Row title = { item } type = "" />
+        ) )
 
-    browseMovies: <>
-        <Row title = "Action" type = "Movie" />
-        <Row title = "Adventure" type = "Movie" />
-        <Row title = "Horror" type = "Movie" />
-        <Row title = "Quirky" type = "Movie" />
-    </>
+        return rows
+    },
+
+    browseShows: () => {
+        const rows = []
+
+        genres.map( item => rows.push(
+            <Row title = { item } type = "Show" />
+        ) )
+
+        return rows
+    },
+
+    browseMovies: () => {
+        const rows = []
+
+        genres.map( item => rows.push(
+            <Row title = { item } type = "Movie" />
+        ) )
+
+        return rows
+    }
 }
 
 export default CONTENT
