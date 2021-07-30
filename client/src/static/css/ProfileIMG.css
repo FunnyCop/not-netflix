@@ -5,18 +5,75 @@
 }
 
 .profileIcon:hover {
-    border: 2px solid whitesmoke;
+    outline: 2px solid whitesmoke;
+    outline-offset: -2.5px;
     cursor: pointer;
 }
+.profileIcon:focus {
+    border: 2px solid whitesmoke;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+.profileIcon:active {
+    transform: scale(0.99);
+}
+
+
 
 .profilePosition {
     width: 100%;
     margin: 15em auto;
     display: flex;
     justify-content: space-evenly;
+    padding: 1em;
 }
 
 .profile-button {
     width: 100%;
-    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    gap: 1em;
+    border-top: 0.5px solid grey;
+    padding-top: 4em;
 }
+.main {
+    text-align: center;
+    padding: .3em;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+}
+.main:hover { 
+    color: white;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cancel {
+    text-align: center;
+    background-color: #212529;
+    padding: .3em;
+    border: 1px solid grey;
+    border-radius: 2px;
+    width: 150px;
+    
+    min-width: 100px;
+    color: grey;
+}
+.cancel:hover { 
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.editProfile {
+    margin-top: 4em;
+    border-bottom: 0.5px solid grey;
+    padding: 0.2em 0;
+}
+
+
+
+/* #ff0000  */

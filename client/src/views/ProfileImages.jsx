@@ -56,42 +56,53 @@ const ProfileImages = () => {
                 <form onSubmit={onSubmitHandler}>
 
                     <div className="profilePosition">
-                        <img
-                            onClick = {() => onClickHandler("1")}
-                            className = "profileIcon"
-                            src = {img1}
-                            alt = "1"
-                            name = "picture"
-                            value = "1"
-                        />
-                        <img
-                            onClick = {() => onClickHandler("2")}
-                            className = "profileIcon"
-                            src = {img2}
-                            alt = "2"
-                            name = "picture"
-                            value = "2"
-                        />
-                        <img
-                            onClick = {() => onClickHandler("3")}
-                            className = "profileIcon"
-                            src = {img3}
-                            alt = "3"
-                            name = "picture"
-                            value = "3"
-                        />
-                        <img
-                            onClick = {() => onClickHandler("4")}
-                            className = "profileIcon"
-                            src = {img4}
-                            alt = "4"
-                            name = "picture"
-                            value = "4"
-                        />
+                        <div>
+                            <img
+                                onClick = {() => onClickHandler("1")}
+                                className = "profileIcon"
+                                src = {img1}
+                                alt = "1"
+                                name = "picture"
+                                value = "1"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                onClick = {() => onClickHandler("2")}
+                                className = "profileIcon"
+                                src = {img2}
+                                alt = "2"
+                                name = "picture"
+                                value = "2"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                onClick = {() => onClickHandler("3")}
+                                className = "profileIcon"
+                                src = {img3}
+                                alt = "3"
+                                name = "picture"
+                                value = "3"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                onClick = {() => onClickHandler("4")}
+                                className = "profileIcon"
+                                src = {img4}
+                                alt = "4"
+                                name = "picture"
+                                value = "4"
+                            />
+                        </div>
                     </div>
                     <div className="profile-button">
                         <Link to="/profile/edit">
-                            <input type="text" value = "Let's do it!" className="btn btn-primary" />
+                            <input type="text" value = "Let's do it!" className="main" />
+                        </Link>
+                        <Link to="/profile/edit">
+                            <input type="text" value = "Not Yet" className="cancel" />
                         </Link>
                     </div>
                 </form>
