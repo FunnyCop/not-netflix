@@ -9,9 +9,9 @@ mongoose.connect( "mongodb://localhost/" + db_name, {
     useFindAndModify: false,
 
     serverSelectionTimeoutMS: 10000,
-    heartbeatFrequencyMS: 10000,
+    heartbeatFrequencyMS: 60000,
 
-    socketTimeoutMS: 30000 // change this value when finished to increase performance
+    socketTimeoutMS: 10000 // change this value when finished to increase performance
 
 } )
 .then( ()=>console.log( "Established a connection to the database!!! Letss get it!" ) )
