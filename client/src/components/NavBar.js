@@ -30,7 +30,7 @@ const NavBar = () => {
                             <a id="navLinks" className="nav-link" href="/browse/movies" aria-disabled="true">Movies</a>
                         </li>
                         <li className="nav-item">
-                            <a id="navLinks" className="nav-link" href="/" aria-disabled="true">New & Popular</a>
+                            <a id="navLinks" className="nav-link" href="/browse" aria-disabled="true">New & Popular</a>
                         </li>
                         <li className="nav-item">
                             <a id="navLinks" className="nav-link" href="/mylist" aria-disabled="true">My List</a>
