@@ -20,9 +20,9 @@ const App = () => {
 
         <Home path = "/" />
 
-        <Browse path = "/browse" content = { CONTENT.browseHome } />
-        <Browse path = "/browse/shows" content = { CONTENT.browseShows } />
-        <Browse path = "/browse/movies" content = { CONTENT.browseMovies } />
+        <Browse path = "/browse" content = { CONTENT.browseHome() } />
+        <Browse path = "/browse/shows" content = { CONTENT.browseShows() } />
+        <Browse path = "/browse/movies" content = { CONTENT.browseMovies() } />
 
         <ProfileAdd path = "/profile/add" />
         <ProfileEdit path = "/profile/edit" />
